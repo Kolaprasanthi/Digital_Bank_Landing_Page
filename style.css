@@ -1,0 +1,401 @@
+:root {
+  --navy: hsl(233, 26%, 24%);
+  --green: hsl(136, 64%, 51%);
+  --cyan: hsl(192, 69%, 51%);
+  --gray: hsl(233, 8%, 62%);
+  --light-gray: hsl(220, 16%, 96%);
+  --off-white: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--gray);
+  background: #fff;
+  font-family: "Public Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  background: #fff;
+}
+
+.site-header .navbar {
+  min-height: 80px;
+}
+
+.brand-logo {
+  display: block;
+  width: 140px;
+}
+
+.navbar-nav {
+  gap: 1rem;
+}
+
+.site-header .nav-link {
+  position: relative;
+  padding: 1.8rem 0;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus {
+  color: var(--navy);
+}
+
+.site-header .nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+  content: "";
+  opacity: 0;
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link:focus::after {
+  opacity: 1;
+}
+
+.invite-button {
+  padding: 0.75rem 2rem;
+  border: 0;
+  border-radius: 2rem;
+  color: #fff;
+  background: linear-gradient(110deg, var(--green), var(--cyan));
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.invite-button:hover,
+.invite-button:focus {
+  color: #fff;
+  opacity: 0.72;
+}
+
+.hero-section {
+  min-height: 620px;
+  overflow: hidden;
+  background-color: var(--off-white);
+  background-image: url("images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 510px) 48%;
+  background-size: 950px auto;
+}
+
+.hero-section .row {
+  min-height: 620px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero-copy p {
+  max-width: 450px;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero-art {
+  position: relative;
+  min-height: 620px;
+}
+
+.mockups-image {
+  position: absolute;
+  top: -100px;
+  right: -130px;
+  z-index: 1;
+  width: min(740px, 115%);
+  max-width: none;
+}
+
+.benefits-section {
+  padding: 6rem 0;
+  background: var(--light-gray);
+}
+
+.section-intro p {
+  max-width: 650px;
+  margin-bottom: 4rem;
+}
+
+.benefit-icon {
+  width: 72px;
+  height: 72px;
+}
+
+.benefit-list p {
+  margin-bottom: 0;
+}
+
+.articles-section {
+  padding: 5.5rem 0;
+  background: var(--off-white);
+}
+
+.articles-section h2 {
+  margin-bottom: 2.5rem;
+}
+
+.article-card {
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.article-card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-card .card-body {
+  padding: 1.5rem;
+}
+
+.article-author {
+  margin-bottom: 0.6rem;
+  font-size: 11px;
+}
+
+.article-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 17px;
+}
+
+.article-card h3:hover {
+  color: hsl(136, 64%, 45%);
+  cursor: pointer;
+}
+
+.article-card .card-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.site-footer {
+  padding: 3rem 0;
+  color: #fff;
+  background: var(--navy);
+}
+
+.footer-logo {
+  width: 140px;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-links a:hover {
+  opacity: 0.65;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li + li {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--green);
+}
+
+.copyright {
+  margin-bottom: 0;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+@media (max-width: 991.98px) {
+  .site-header .navbar {
+    min-height: 68px;
+  }
+
+  .site-header .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgb(0 0 0 / 15%);
+  }
+
+  .site-header .nav-link {
+    padding: 0.6rem;
+    color: var(--navy);
+    text-align: center;
+  }
+
+  .hero-section {
+    background-image: url("images/bg-intro-mobile.svg");
+    background-position: center top;
+    background-size: 100% auto;
+  }
+
+  .hero-section .row {
+    min-height: auto;
+  }
+
+  .hero-art {
+    order: -1;
+    min-height: 390px;
+  }
+
+  .mockups-image {
+    top: -115px;
+    right: 50%;
+    width: min(520px, 110%);
+    transform: translateX(50%);
+  }
+
+  .hero-copy {
+    padding-top: 0;
+    padding-bottom: 5rem;
+  }
+
+  .hero-copy p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .benefits-section {
+    padding: 4.5rem 0;
+    text-align: center;
+  }
+
+  .section-intro p {
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-left: auto;
+  }
+
+  .benefit-list h3 {
+    margin-top: 1.25rem;
+  }
+
+  .benefit-list p {
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero-art {
+    min-height: 320px;
+  }
+
+  .mockups-image {
+    top: -95px;
+    width: min(420px, 112%);
+  }
+
+  .hero-copy {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .hero-copy p {
+    max-width: 360px;
+  }
+
+  .benefits-section,
+  .articles-section {
+    padding: 4rem 0;
+  }
+
+  .section-intro {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .benefit-list {
+    row-gap: 2.5rem !important;
+  }
+
+  .articles-section h2 {
+    text-align: center;
+  }
+
+  .article-card .card-img-top {
+    height: 220px;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+  }
+}
